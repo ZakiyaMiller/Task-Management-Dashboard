@@ -2,7 +2,6 @@
 
 A feature-rich task management dashboard built with React, Redux, and Firebase. Implements pixel-perfect Figma design with advanced features including authentication, drag-and-drop, subtasks, activity logging, and real-time due date notifications.
 
-![Dashboard Preview](https://img.shields.io/badge/Status-Complete-success)
 ![React](https://img.shields.io/badge/React-19.2.3-blue)
 ![Redux](https://img.shields.io/badge/Redux-Toolkit-purple)
 ![Firebase](https://img.shields.io/badge/Firebase-Auth-orange)
@@ -28,18 +27,15 @@ This project is a comprehensive task management dashboard developed as part of t
 
 ## Features Checklist
 
-### **LEVEL 1 FUNCTIONALITIES** (100% Complete)
+### **LEVEL 1 FUNCTIONALITIES**
 
 | Feature | Status | Description |
 |---------|--------|-------------|
-| **Dashboard UI** | Done | Pixel-perfect implementation matching Figma design (1440×932 viewport) |
-| **Three-Stage Layout** | Done | To Do, In Progress, Done columns with color-coded indicators |
-| **Add Task** | Done | Modal-based task creation with dynamic names, descriptions, and metadata |
-| **Move Tasks** | Done | Click-and-drag functionality to move tasks between columns |
-| **Task Filtering** | Done | Filter tasks by priority (All, Low, High, Completed) |
-| **Redux State Management** | Done | Centralized state using Redux Toolkit |
-| **Local Storage Persistence** | Done | Tasks persist across page refreshes using redux-persist |
-| **Drag & Drop (Bonus)** | Done | Smooth drag-and-drop with visual feedback using @hello-pangea/dnd |
+| **Dashboard UI** | Done | Pixel-perfect implementation matching Figma design |
+| **Task Management** | Done | Add Task, Move Task, BONUS: Drag n Drop feature implemented. |
+| **Filtering** | Done | Filter tasks by priority |
+| **State Management Using Redux** | Done | Centralized state using Redux Toolkit,  application state is persistent using Local Storage |
+| **Drag & Drop (Bonus)** | Done | Smooth drag-and-drop using @hello-pangea/dnd |
 
 ### **LEVEL 2 FUNCTIONALITIES** (5 out of 6 Complete)
 
@@ -164,15 +160,7 @@ npm install
 4. Go to **Project Settings** → **Your apps** → **Web app** → Copy config values
 
 ### Step 4: Environment Variables
-Create a `.env` file in the root directory and add your Firebase credentials:
-```env
-REACT_APP_FIREBASE_API_KEY=your_api_key_here
-REACT_APP_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
-REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-REACT_APP_FIREBASE_STORAGE_BUCKET=your_project_id.firebasestorage.app
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-REACT_APP_FIREBASE_APP_ID=your_app_id
-```
+Create a `.env` file in the root directory and add your Firebase credentials
 
 ### Step 5: Start Development Server
 ```bash
