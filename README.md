@@ -27,7 +27,7 @@ This project is a comprehensive task management dashboard developed as part of t
 
 ## Features Checklist
 
-### **LEVEL 1 FUNCTIONALITIES**
+### **LEVEL 1 FUNCTIONALITIES** (5 out of 5 Complete)
 
 | Feature | Status | Description |
 |---------|--------|-------------|
