@@ -1,70 +1,199 @@
-# Getting Started with Create React App
+# Task Dashboard - Creative Upaay Full Stack Development Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A feature-rich task management dashboard built with React, Redux, and Firebase. Implements pixel-perfect Figma design with advanced features including authentication, drag-and-drop, subtasks, activity logging, and real-time due date notifications.
 
-## Available Scripts
+![Dashboard Preview](https://img.shields.io/badge/Status-Complete-success)
+![React](https://img.shields.io/badge/React-19.2.3-blue)
+![Redux](https://img.shields.io/badge/Redux-Toolkit-purple)
+![Firebase](https://img.shields.io/badge/Firebase-Auth-orange)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Project Overview](#project-overview)
+- [Features Checklist](#features-checklist)
+- [Tech Stack](#tech-stack)
+- [Approach & Architecture](#approach--architecture)
+- [Installation & Setup](#installation--setup)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Project Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is a comprehensive task management dashboard developed as part of the Creative Upaay Full Stack Development Assignment. It replicates the provided Figma design while implementing advanced features for task organization, collaboration, and productivity tracking.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features Checklist
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **LEVEL 1 FUNCTIONALITIES** (100% Complete)
 
-### `npm run eject`
+| Feature | Status | Description |
+|---------|--------|-------------|
+| **Dashboard UI** | Done | Pixel-perfect implementation matching Figma design (1440×932 viewport) |
+| **Three-Stage Layout** | Done | To Do, In Progress, Done columns with color-coded indicators |
+| **Add Task** | Done | Modal-based task creation with dynamic names, descriptions, and metadata |
+| **Move Tasks** | Done | Click-and-drag functionality to move tasks between columns |
+| **Task Filtering** | Done | Filter tasks by priority (All, Low, High, Completed) |
+| **Redux State Management** | Done | Centralized state using Redux Toolkit |
+| **Local Storage Persistence** | Done | Tasks persist across page refreshes using redux-persist |
+| **Drag & Drop (Bonus)** | Done | Smooth drag-and-drop with visual feedback using @hello-pangea/dnd |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **LEVEL 2 FUNCTIONALITIES** (5 out of 6 Complete)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Feature | Status | Description |
+|---------|--------|-------------|
+| **Basic Authentication** | Done | Firebase Auth with email/password and Google OAuth |
+| **Due Date & Reminder** | Done | Date picker, color-coded due date badges, banner notifications for overdue/upcoming tasks |
+| **Subtasks** | Done | Nested subtask management with progress tracking, add/toggle/delete functionality |
+| **Socket.io Integration** | ❌ | Not implemented (opted for Firebase Auth instead) |
+| **Customizable Task Fields** | Done | 8 custom tags (Design, Development, Testing, etc.) and 11 effort estimates (30m-2w) |
+| **Activity Log** | Done | Comprehensive activity tracking with 7+ event types, expandable timeline UI |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Additional Features Implemented** (Bonus)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Feature | Status | Description |
+|---------|--------|-------------|
+| **Edit Task** | Done | Edit any task via dropdown menu with pre-filled modal |
+| **Delete Task** | Done | Delete tasks with confirmation dialog |
+| **Avatar Management** | Done | Custom team member avatars from Figma assets |
+| **Protected Routes** | Done | Dashboard access restricted to authenticated users |
+| **Click-Outside Detection** | Done | Improved UX for dropdown menus |
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tech Stack
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Core Technologies
+- **React** 19.2.3 - UI framework
+- **Redux Toolkit** 2.11.2 - State management
+- **Redux Persist** 6.0.0 - State persistence
+- **Firebase** 12.7.0 - Authentication (Email/Password + Google OAuth)
 
-### Code Splitting
+### UI & Styling
+- **Material-UI** 7.3.6 - Icon library
+- **@emotion/react** & **@emotion/styled** - CSS-in-JS (Material-UI peer dependency)
+- **Custom CSS** - Component-level styling matching Figma specs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Drag & Drop
+- **@hello-pangea/dnd** 18.0.1 - Modern drag-and-drop library
 
-### Analyzing the Bundle Size
+### Date Management
+- **date-fns** 4.1.0 - Date formatting and calculations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Utilities
+- **uuid** 13.0.0 - Unique ID generation for tasks and activities
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Approach & Architecture
 
-### Advanced Configuration
+### 1. Design-First Approach
+- Analyzed Figma design and extracted color palette, component hierarchy, and constants
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 2. Component-Based Architecture
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Sidebar/        # Left navigation panel
+│   ├── Header/         # Top header with search and profile
+│   ├── ProjectHeader/  # Project controls and filters
+│   ├── TaskColumn/     # Droppable task container
+│   ├── TaskCard/       # Individual task display
+│   ├── AddTaskModal/   # Task creation/editing modal
+│   ├── SubtasksList/   # Nested subtask management
+│   ├── ActivityLog/    # Task activity timeline
+│   ├── NotificationBanner/ # Due date alerts
+│   └── Login/          # Authentication UI
+├── redux/              # State management
+│   ├── store.js        # Redux store with persistence
+│   └── tasksSlice.js   # Task actions and reducers
+├── contexts/           # React Context API
+│   └── AuthContext.js  # Firebase auth state
+├── firebase/           # Firebase configuration
+│   └── config.js       # Firebase initialization
+└── utils/              # Constants and helpers
+    └── constants.js    # Sample data, colors, configs
+```
 
-### Deployment
+### 3. State Management Strategy
+- **Redux Toolkit** for centralized task management
+- **Redux Persist** for localStorage synchronization
+- **Context API** for authentication state (separate concern)
+- Automatic activity logging on every task modification
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 4. Authentication Flow
+- Firebase initialization with environment variables
+- React Context for auth state management
+- Protected routes (redirect to login if not authenticated)
+- Persistent sessions across page refreshes
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Assumptions Made
+
+- **Viewport**: Designed for 1440×932 desktop viewport (as per Figma design)
+- **Single-user mode**: No multi-user permissions or real-time collaboration
+
+---
+
+## Installation & Setup
+
+### Prerequisites
+- **Node.js** (v14 or higher)
+- **npm** or **yarn**
+- **Firebase Account** (for authentication)
+
+### Step 1: Clone the Repository
+```bash
+git clone <your-repo-url>
+cd dashboard-design-cu
+```
+
+### Step 2: Install Dependencies
+```bash
+npm install
+```
+
+### Step 3: Firebase Setup
+1. Go to [Firebase Console](https://console.firebase.google.com)
+2. Create a new project (or use existing)
+3. Enable **Authentication** → **Email/Password** and **Google** sign-in methods
+4. Go to **Project Settings** → **Your apps** → **Web app** → Copy config values
+
+### Step 4: Environment Variables
+Create a `.env` file in the root directory and add your Firebase credentials:
+```env
+REACT_APP_FIREBASE_API_KEY=your_api_key_here
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_project_id.firebasestorage.app
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+```
+
+### Step 5: Start Development Server
+```bash
+npm start
+```
+
+The app will open at `http://localhost:3000`
+
+### Step 6: Build for Production
+```bash
+npm run build
+```
+
+---
+
+## Author
+
+Created by **Zakiya Miller** for Creative Upaay Full Stack Development Assignment
+
+- GitHub: [@ZakiyaMiller](https://github.com/ZakiyaMiller)
+- Email: kzakiya2004@gmail.com
+
+**Live Demo**: [Add your deployed URL here]  
+**Submission Date**: December 18, 2025

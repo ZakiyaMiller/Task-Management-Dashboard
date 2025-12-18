@@ -1,0 +1,146 @@
+.activity-log-container {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #F0F0F0;
+}
+
+.activity-log-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #F9F9F9;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0D062D;
+  transition: all 0.2s;
+}
+
+.activity-log-toggle:hover {
+  background-color: #F0F0F0;
+  border-color: #5030E5;
+}
+
+.activity-log-toggle svg {
+  color: #5030E5;
+}
+
+.toggle-arrow {
+  margin-left: auto;
+  font-size: 10px;
+  color: #787486;
+  transition: transform 0.3s;
+}
+
+.toggle-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.activity-log-content {
+  margin-top: 12px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.activity-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px;
+  background-color: #FAFAFA;
+  border-radius: 8px;
+}
+
+.activity-item {
+  display: flex;
+  gap: 12px;
+  position: relative;
+}
+
+.activity-icon-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activity-icon {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.icon-created {
+  color: #5030E5;
+}
+
+.icon-status {
+  color: #FFA500;
+}
+
+.icon-added {
+  color: #4CAF50;
+}
+
+.icon-completed {
+  color: #8BC48A;
+}
+
+.icon-uncompleted {
+  color: #787486;
+}
+
+.icon-deleted {
+  color: #FF4D4D;
+}
+
+.icon-updated {
+  color: #2196F3;
+}
+
+.icon-default {
+  color: #787486;
+}
+
+.activity-line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(180deg, #E0E0E0 0%, transparent 100%);
+  margin-top: 4px;
+}
+
+.activity-details {
+  flex: 1;
+  padding-bottom: 4px;
+}
+
+.activity-message {
+  font-size: 12px;
+  color: #0D062D;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.activity-time {
+  font-size: 11px;
+  color: #787486;
+  font-style: italic;
+}

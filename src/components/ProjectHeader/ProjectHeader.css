@@ -1,0 +1,247 @@
+.project-header {
+  padding: 40px 0 32px 0;
+  position: relative;
+}
+
+.project-header-row-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.project-title-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-header-row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-controls-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-title {
+  font-size: 48px;
+  font-weight: 600;
+  color: #0D062D;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.project-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #5030E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.project-icon-btn:hover {
+  opacity: 0.7;
+}
+
+
+
+.project-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid #787486;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #787486;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 400;
+  height: 40px;
+}
+
+.project-btn:hover {
+  border-color: #5030E5;
+  color: #5030E5;
+}
+
+.invite-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  border: 1px solid #5030E5;
+  color: #5030E5;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 40px;
+}
+
+.invite-btn:hover {
+  background-color: rgba(80, 48, 229, 0.05);
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 6px 12px;
+  background-color: #F5F5F5;
+  border-radius: 24px;
+  height: 40px;
+}
+
+.project-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  margin-left: -8px;
+  object-fit: cover;
+}
+
+.project-avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar-more {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #F4D7DA;
+  color: #D25B68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: -8px;
+  border: 2px solid #ffffff;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  color: #787486;
+  border: 1px solid #787486;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  height: 40px;
+  transition: all 0.2s;
+}
+
+.share-btn:hover {
+  border-color: #5030E5;
+  color: #5030E5;
+}
+
+.menu-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #787486;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.view-btn {
+  background-color: #ffffff;
+  border: 1px solid #E0E0E0;
+  cursor: pointer;
+  padding: 8px;
+  color: #787486;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+  width: 40px;
+  height: 40px;
+}
+
+.view-btn:hover {
+  border-color: #5030E5;
+  color: #5030E5;
+}
+
+.view-btn-active {
+  background-color: #5030E5;
+  border-color: #5030E5;
+  color: #ffffff;
+}
+
+.view-btn-active:hover {
+  background-color: #3D24B8;
+  border-color: #3D24B8;
+}
+
+.project-filter-menu {
+  position: absolute;
+  top: 100px;
+  right: 300px;
+  background-color: #ffffff;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.project-filter-menu h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0D062D;
+}
+
+.project-filter-menu button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #787486;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.project-filter-menu button:hover {
+  background-color: #F5F5F5;
+}

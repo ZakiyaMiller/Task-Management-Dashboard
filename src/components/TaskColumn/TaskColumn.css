@@ -1,0 +1,101 @@
+.task-column {
+  flex: 1;
+  min-width: 350px;
+  background-color: #F5F5F5;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.column-title-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.column-indicator {
+  width: 8px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.column-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0D062D;
+  margin: 0;
+}
+
+.column-count {
+  background-color: #E0E0E0;
+  color: #625F6D;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 12px;
+  min-width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-task-btn {
+  width: 28px;
+  height: 28px;
+  background-color: #5030E5;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.add-task-btn:hover {
+  background-color: #5030E5;
+  color: #ffffff;
+  border-color: #5030E5;
+}
+
+.tasks-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2px;
+  min-height: 100px;
+  transition: background-color 0.2s;
+}
+
+.tasks-container.dragging-over {
+  background-color: rgba(80, 48, 229, 0.05);
+  border-radius: 8px;
+}
+
+/* Scrollbar Styling */
+.tasks-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tasks-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tasks-container::-webkit-scrollbar-thumb {
+  background: #D0D0D0;
+  border-radius: 3px;
+}
+
+.tasks-container::-webkit-scrollbar-thumb:hover {
+  background: #B0B0B0;
+}

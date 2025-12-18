@@ -1,0 +1,279 @@
+.task-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: grab;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.task-card.dragging {
+  cursor: grabbing;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: rotate(2deg);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.priority-badge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+}
+
+.task-menu-container {
+  position: relative;
+}
+
+.task-menu {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #787486;
+  cursor: pointer;
+  padding: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.task-menu:hover {
+  background-color: #F5F5F5;
+}
+
+.task-card:hover .task-menu {
+  opacity: 1;
+}
+
+.task-menu-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 160px;
+  margin-top: 4px;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #0D062D;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #F5F5F5;
+}
+
+.menu-item:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.menu-item:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.delete-item {
+  color: #FF4D4D;
+}
+
+.delete-item:hover {
+  background-color: #FFE5E5;
+}
+
+.menu-item svg {
+  font-size: 18px;
+}
+
+.task-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0D062D;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.task-description {
+  font-size: 12px;
+  color: #787486;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+.task-metadata {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.task-tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.task-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.task-effort {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background-color: #F5F5F5;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #787486;
+}
+
+.task-effort svg {
+  font-size: 14px !important;
+  color: #787486;
+}
+
+.due-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.due-date-icon {
+  font-size: 14px !important;
+}
+
+.due-overdue {
+  background-color: #FFE5E5;
+  color: #C62828;
+}
+
+.due-today {
+  background-color: #FFF4E5;
+  color: #E65100;
+}
+
+.due-tomorrow {
+  background-color: #E3F2FD;
+  color: #1565C0;
+}
+
+.due-soon {
+  background-color: #F3E5F5;
+  color: #6A1B9A;
+}
+
+.due-later {
+  background-color: #F5F5F5;
+  color: #787486;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.task-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  margin-left: -8px;
+  object-fit: cover;
+}
+
+.task-avatar:first-child {
+  margin-left: 0;
+}
+
+.task-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #787486;
+}
+
+.stat-icon {
+  color: #787486;
+  opacity: 0.7;
+}
+
+.stat-count {
+  font-weight: 400;
+}

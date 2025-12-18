@@ -1,38 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.dashboard {
+  flex: 1;
+  padding: 90px 40px 40px 40px;
+  overflow-x: auto;
+  background-color: #ffffff;
+}
+
+.columns-container {
+  display: flex;
+  gap: 24px;
+  min-height: calc(100vh - 170px);
+  align-items: flex-start;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .columns-container {
+    flex-direction: column;
+  }
+  
+  .task-column {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .dashboard {
+    padding: 80px 20px 20px 20px;
+  }
+}
+
+.loading-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes spin {
   to {
     transform: rotate(360deg);
   }
+}
+
+.loading-container p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
