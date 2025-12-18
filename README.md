@@ -5,8 +5,8 @@ A feature-rich task management dashboard built with React, Redux, and Firebase. 
 ![React](https://img.shields.io/badge/React-19.2.3-blue)
 ![Redux](https://img.shields.io/badge/Redux-Toolkit-purple)
 ![Firebase](https://img.shields.io/badge/Firebase-Auth-orange)
-![Live-Demo](task-management-dashboard-firebase-zakiyas-projects-cb77cfea.vercel.app)
 
+**Live Demo**: [task-management-dashboard-firebase-zakiyas-projects-cb77cfea.vercel.app]  
 ---
 
 ## Table of Contents
